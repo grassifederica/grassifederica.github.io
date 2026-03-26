@@ -79,30 +79,6 @@ body {
 .intro-body {
   font-size:1.05rem; line-height:2.1; color:var(--mid); max-width:640px;
 }
-
-/* ── MOODBOARD GRID ── */
-.moodboard {
-  padding:0 80px 110px;
-  display:grid;
-  grid-template-columns: 2fr 1fr 1fr;
-  grid-template-rows: auto auto;
-  gap:3px;
-}
-.mood-cell {
-  position:relative; overflow:hidden;
-  background:var(--bv-pale);
-}
-.mood-cell.tall { grid-row:span 2; }
-.mood-cell.wide { grid-column:span 2; }
-.mood-svg { width:100%; height:100%; display:block; min-height:280px; }
-.mood-label {
-  position:absolute; bottom:0; left:0; right:0;
-  padding:20px 24px;
-  background:linear-gradient(to top,rgba(0,0,0,.5),transparent);
-  font-size:.56rem; letter-spacing:.3em; text-transform:uppercase;
-  color:rgba(255,255,255,.8);
-}
-
 /* ── PULL QUOTE ── */
 .pullquote {
   padding:100px 80px;
@@ -427,103 +403,6 @@ body {
   <h1 class="intro-headline">A celebration of<br><em>Bottega Green</em> —<br>seen not as a colour,<br>but as a blueprint.</h1>
   <p class="intro-body">Born in 1966 in Vicenza, Bottega Veneta built its identity on one principle: the human hand as the highest tool. <em>The Green Thread</em> is a global odyssey connecting the ancient art of Intrecciato with modern sustainability — a promise to the earth told by the hands of those who shape it.</p>
 </div>
-
-<!-- ═══ MOODBOARD ═══ -->
-<div class="moodboard reveal">
-  <!-- Cell 1: tall — Intrecciato texture -->
-  <div class="mood-cell tall">
-    <svg class="mood-svg" viewBox="0 0 500 600" xmlns="http://www.w3.org/2000/svg">
-      <rect width="500" height="600" fill="#1D9A3C"/>
-      <!-- Intrecciato weave pattern -->
-      <defs>
-        <pattern id="intrecciato" x="0" y="0" width="60" height="60" patternUnits="userSpaceOnUse">
-          <!-- horizontal strip -->
-          <rect x="0" y="22" width="28" height="16" rx="2" fill="rgba(0,0,0,.35)"/>
-          <rect x="32" y="22" width="28" height="16" rx="2" fill="rgba(0,0,0,.35)"/>
-          <!-- vertical strip over -->
-          <rect x="22" y="0" width="16" height="28" rx="2" fill="rgba(0,0,0,.25)"/>
-          <rect x="22" y="32" width="16" height="28" rx="2" fill="rgba(0,0,0,.25)"/>
-          <!-- crossover highlight -->
-          <rect x="22" y="22" width="16" height="16" rx="2" fill="rgba(255,255,255,.08)"/>
-        </pattern>
-      </defs>
-      <rect width="500" height="600" fill="url(#intrecciato)"/>
-      <rect width="500" height="600" fill="rgba(29,154,60,.3)"/>
-      <!-- Large BV text watermark -->
-      <text x="250" y="340" font-family="Georgia,serif" font-size="180" font-weight="700"
-        fill="rgba(255,255,255,.06)" text-anchor="middle" letter-spacing="-8">BV</text>
-    </svg>
-    <div class="mood-label">Intrecciato · Craft in Motion</div>
-  </div>
-  <!-- Cell 2: moodboard collage top right -->
-  <div class="mood-cell">
-    <svg class="mood-svg" viewBox="0 0 400 280" xmlns="http://www.w3.org/2000/svg">
-      <rect width="400" height="280" fill="#F0EDE6"/>
-      <!-- Fashion silhouette sketch -->
-      <ellipse cx="200" cy="70" rx="30" ry="36" fill="none" stroke="#1D9A3C" stroke-width="1.5"/>
-      <line x1="200" y1="106" x2="200" y2="200" stroke="#1D9A3C" stroke-width="1.5"/>
-      <line x1="200" y1="130" x2="160" y2="165" stroke="#1D9A3C" stroke-width="1.5"/>
-      <line x1="200" y1="130" x2="240" y2="165" stroke="#1D9A3C" stroke-width="1.5"/>
-      <line x1="200" y1="200" x2="178" y2="265" stroke="#1D9A3C" stroke-width="1.5"/>
-      <line x1="200" y1="200" x2="222" y2="265" stroke="#1D9A3C" stroke-width="1.5"/>
-      <!-- BV bag sketch -->
-      <rect x="148" y="148" width="26" height="22" rx="3" fill="none" stroke="#1D9A3C" stroke-width="1.2"/>
-      <path d="M154 148 Q161 138 168 148" fill="none" stroke="#1D9A3C" stroke-width="1.2"/>
-      <!-- Decorative lines -->
-      <text x="200" y="250" font-family="Georgia,serif" font-size="11" fill="#1D9A3C"
-        text-anchor="middle" letter-spacing="4">SS COLLECTION</text>
-      <line x1="40" y1="258" x2="140" y2="258" stroke="#1D9A3C" stroke-width=".5"/>
-      <line x1="260" y1="258" x2="360" y2="258" stroke="#1D9A3C" stroke-width=".5"/>
-    </svg>
-    <div class="mood-label">SS Collection Presentation</div>
-  </div>
-  <!-- Cell 3: Parakeet green block with text -->
-  <div class="mood-cell">
-    <svg class="mood-svg" viewBox="0 0 400 280" xmlns="http://www.w3.org/2000/svg">
-      <rect width="400" height="280" fill="#fff"/>
-      <rect x="0" y="0" width="400" height="4" fill="#1D9A3C"/>
-      <text x="200" y="110" font-family="Georgia,serif" font-size="72" font-weight="300"
-        fill="#1D9A3C" text-anchor="middle" letter-spacing="-2">Green</text>
-      <text x="200" y="148" font-family="Georgia,serif" font-size="10" font-style="italic"
-        fill="#555" text-anchor="middle" letter-spacing="1">A chromatic dialogue between earth and hand.</text>
-      <text x="200" y="166" font-family="Georgia,serif" font-size="10" font-style="italic"
-        fill="#555" text-anchor="middle" letter-spacing="1">The color of continuity.</text>
-      <line x1="80" y1="195" x2="320" y2="195" stroke="#1D9A3C" stroke-width=".7"/>
-      <text x="200" y="220" font-family="Arial,sans-serif" font-size="8" 
-        fill="#999" text-anchor="middle" letter-spacing="4">BOTTEGA VENETA</text>
-    </svg>
-    <div class="mood-label">Parakeet Green Identity</div>
-  </div>
-  <!-- Cell 4: city map dots -->
-  <div class="mood-cell wide">
-    <svg class="mood-svg" viewBox="0 0 800 280" xmlns="http://www.w3.org/2000/svg" style="min-height:220px;">
-      <rect width="800" height="280" fill="#F7F5F0"/>
-      <!-- Minimal world map outline suggestion -->
-      <path d="M60,80 Q120,60 200,75 Q280,90 340,70 Q380,60 420,75 Q480,88 520,72 Q580,55 640,70 Q700,85 750,75" 
-        fill="none" stroke="#DDD" stroke-width="20" stroke-linecap="round"/>
-      <!-- City dots & labels -->
-      <circle cx="190" cy="120" r="8" fill="#1D9A3C"/>
-      <text x="190" y="148" font-family="Arial,sans-serif" font-size="11" fill="#333" text-anchor="middle" letter-spacing="1">MILAN</text>
-      <circle cx="230" cy="108" r="8" fill="#1D9A3C"/>
-      <text x="230" y="148" font-family="Arial,sans-serif" font-size="11" fill="#333" text-anchor="middle" letter-spacing="1">LONDON</text>
-      <circle cx="310" cy="130" r="8" fill="#1D9A3C"/>
-      <text x="310" y="158" font-family="Arial,sans-serif" font-size="11" fill="#333" text-anchor="middle" letter-spacing="1">NEW YORK</text>
-      <circle cx="590" cy="145" r="8" fill="#1D9A3C"/>
-      <text x="590" y="173" font-family="Arial,sans-serif" font-size="11" fill="#333" text-anchor="middle" letter-spacing="1">HONG KONG</text>
-      <!-- Connecting lines -->
-      <line x1="190" y1="120" x2="230" y2="108" stroke="#1D9A3C" stroke-width="1" stroke-dasharray="4,4"/>
-      <line x1="230" y1="108" x2="310" y2="130" stroke="#1D9A3C" stroke-width="1" stroke-dasharray="4,4"/>
-      <line x1="310" y1="130" x2="590" y2="145" stroke="#1D9A3C" stroke-width="1" stroke-dasharray="4,4"/>
-      <!-- title -->
-      <text x="400" y="58" font-family="Georgia,serif" font-size="22" fill="#1D9A3C" 
-        text-anchor="middle" letter-spacing="6" font-weight="400">4 IMPACTFUL CITIES</text>
-      <text x="400" y="240" font-family="Arial,sans-serif" font-size="9" fill="#AAA"
-        text-anchor="middle" letter-spacing="3">GLOBAL EVENT PLAN · POST PARIS FASHION WEEK</text>
-    </svg>
-    <div class="mood-label">Global Reach · Milan · London · New York · Hong Kong</div>
-  </div>
-</div>
-
 <!-- ═══ PULL QUOTE ═══ -->
 <div class="pullquote reveal">
   <div class="pq-eyebrow">The Green Thread · Concept Statement</div>
@@ -548,12 +427,6 @@ body {
             <rect x="7" y="0" width="6" height="9" rx="1" fill="rgba(255,255,255,.4)"/>
             <rect x="7" y="11" width="6" height="9" rx="1" fill="rgba(255,255,255,.4)"/>
             <rect x="7" y="7" width="6" height="6" rx="1" fill="rgba(255,255,255,.15)"/>
-          </pattern>
-        </defs>
-        <circle cx="60" cy="60" r="56" fill="none" stroke="rgba(255,255,255,.3)" stroke-width="1"/>
-        <circle cx="60" cy="60" r="48" fill="url(#w)"/>
-        <circle cx="60" cy="60" r="48" fill="rgba(15,92,36,.4)"/>
-      </svg>
       <div class="spread-caption">Craft in Motion</div>
     </div>
   </div>
