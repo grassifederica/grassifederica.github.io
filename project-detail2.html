@@ -3,161 +3,236 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bottega Veneta Case Study - Federica Grassi</title>
+  <title>Bottega Veneta Case Study — Federica Grassi</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,700;0,6..96,900;1,6..96,400;1,6..96,700;1,6..96,900&family=Raleway:wght@100;200;300;400;500&family=Cinzel:wght@400;600;900&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg-primary: #F8F4F0; /* Cream, quiet luxury [web:6] */
-      --bg-secondary: #FFFFFF;
-      --text-primary: #000000; /* Iconic black [web:5] */
-      --accent-tan: #C19A6B; /* Intrecciato leather tan [web:2][image:14] */
-      --accent-olive: #556B2F; /* Subtle Vicenza heritage [file:1][image:12] */
-      --shadow: 0 4px 20px rgba(0,0,0,0.1);
+      --void: #050403;
+      --ember: #C8783A;
+      --champagne: #F0E2C8;
+      --champagne-dim: #C9B898;
+      --gold-line: rgba(200, 120, 58, 0.2);
     }
+
     * { margin: 0; padding: 0; box-sizing: border-box; }
+    
     body {
-      font-family: 'Georgia', serif;
-      background: var(--bg-primary);
-      color: var(--text-primary);
-      line-height: 1.7;
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 2rem;
+      background: var(--void);
+      color: var(--champagne);
+      font-family: 'Raleway', sans-serif;
+      line-height: 1.8;
+      overflow-x: hidden;
+      cursor: none;
     }
+
+    /* CURSORE PERSONALIZZATO */
+    #cur { position: fixed; width: 6px; height: 6px; background: var(--ember); border-radius: 50%; pointer-events: none; z-index: 9999; transform: translate(-50%, -50%); }
+    #cur-r { position: fixed; width: 30px; height: 30px; border: 1px solid var(--ember); border-radius: 50%; pointer-events: none; z-index: 9998; transform: translate(-50%, -50%); transition: all 0.1s ease-out; }
+
+    /* HEADER */
     header {
-      text-align: center;
-      padding: 3rem 0;
-      border-bottom: 2px solid var(--accent-tan);
-      margin-bottom: 3rem;
+      padding: 120px 72px 60px;
+      max-width: 1400px;
+      margin: 0 auto;
     }
+
+    .back-link {
+      font-family: 'Cinzel', serif;
+      text-decoration: none;
+      color: var(--ember);
+      letter-spacing: 3px;
+      font-size: 13px;
+      text-transform: uppercase;
+      display: inline-block;
+      margin-bottom: 40px;
+      transition: 0.3s;
+    }
+    .back-link:hover { opacity: 0.7; }
+
     h1 {
-      font-size: 3rem;
-      color: var(--text-primary);
-      margin-bottom: 0.5rem;
+      font-family: 'Bodoni Moda', serif;
+      font-size: 80px;
+      font-weight: 900;
+      line-height: 1;
+      margin-bottom: 20px;
     }
+    h1 em { font-style: italic; color: var(--ember); }
+
     .subtitle {
-      font-size: 1.2rem;
-      color: var(--accent-olive);
-      font-style: italic;
+      font-family: 'Cinzel', serif;
+      font-size: 16px;
+      letter-spacing: 4px;
+      color: var(--champagne-dim);
+      text-transform: uppercase;
     }
-    .project-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 3rem;
-      margin-bottom: 3rem;
+
+    /* GRID SYSTEM */
+    .content-wrapper {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 72px 100px;
     }
+
     .section {
-      background: var(--bg-secondary);
-      padding: 2rem;
-      border-radius: 8px;
-      box-shadow: var(--shadow);
-      border-left: 4px solid var(--accent-tan);
-      position: relative;
+      padding: 80px 0;
+      border-top: 1px solid var(--gold-line);
+      display: grid;
+      grid-template-columns: 300px 1fr;
+      gap: 60px;
     }
-    .section h2 {
-      color: var(--accent-olive);
-      margin-bottom: 1rem;
-      font-size: 1.8rem;
+
+    .s-label {
+      font-family: 'Cinzel', serif;
+      font-size: 12px;
+      letter-spacing: 3px;
+      color: var(--ember);
+      text-transform: uppercase;
     }
-    .section img {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-      border-radius: 8px;
-      margin: 1rem 0;
-      box-shadow: var(--shadow);
+
+    h2 {
+      font-family: 'Bodoni Moda', serif;
+      font-size: 42px;
+      margin-bottom: 30px;
+      color: var(--champagne);
     }
-    ul { list-style: none; padding-left: 0; }
+
+    p {
+      font-size: 18px;
+      color: rgba(240, 226, 200, 0.8);
+      max-width: 800px;
+    }
+
+    ul { list-style: none; margin-top: 30px; }
     ul li {
-      padding: 0.5rem 0;
-      position: relative;
-      padding-left: 1.5rem;
+      padding: 15px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+      font-size: 18px;
+      display: flex;
+      align-items: center;
     }
     ul li::before {
       content: '—';
-      color: var(--accent-tan);
-      font-weight: bold;
-      position: absolute;
-      left: 0;
+      margin-right: 20px;
+      color: var(--ember);
     }
-    .challenge {
-      grid-column: span 2;
-      background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--accent-tan) 10%);
+
+    .image-placeholder {
+      width: 100%;
+      height: 500px;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid var(--gold-line);
+      margin: 40px 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Cinzel', serif;
+      letter-spacing: 5px;
+      color: rgba(200, 120, 58, 0.2);
     }
-    .full-width {
-      grid-column: span 2;
-    }
+
+    /* REVEAL EFFECT */
+    .reveal { opacity: 0; transform: translateY(30px); transition: 1s all ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
     footer {
       text-align: center;
-      padding: 2rem;
-      color: #666;
-      border-top: 1px solid var(--accent-tan);
-      margin-top: 3rem;
+      padding: 100px 72px;
+      border-top: 1px solid var(--gold-line);
+      font-family: 'Cinzel', serif;
+      font-size: 12px;
+      letter-spacing: 3px;
     }
-    @media (max-width: 768px) {
-      .project-grid { grid-template-columns: 1fr; }
-      h1 { font-size: 2rem; }
-      body { padding: 1rem; }
-      .section img { height: 180px; }
+
+    @media (max-width: 900px) {
+      header, .content-wrapper { padding: 60px 30px; }
+      h1 { font-size: 50px; }
+      .section { grid-template-columns: 1fr; gap: 20px; }
+      .image-placeholder { height: 300px; }
     }
   </style>
 </head>
 <body>
+
+  <div id="cur"></div>
+  <div id="cur-r"></div>
+
   <header>
-    <h1>Bottega Veneta</h1>
-    <p class="subtitle">Vicenza 1966 – Luxury Brand Growth Through Secondary Associations</p>
-    <p style="margin-top: 1rem; font-size: 1.1rem;">Federica Grassi et al.</p>
+    <a href="index.html" class="back-link">← Back to Portfolio</a>
+    <div class="reveal">
+      <p class="s-label">Case Study 2026</p>
+      <h1>Bottega <em>Veneta</em></h1>
+      <p class="subtitle">Luxury Growth Through Secondary Associations</p>
+    </div>
   </header>
 
-  <div class="project-grid">
-    <section class="section full-width">
-      <h2>Brand Overview</h2>
-      [image:14]
-      
-      <p>Quiet luxury via artisanal intrecciato leather, logo-free design, and Italian bottega roots.</p>
-      <ul>
-        >High-net-worth and Gen-Z valuing heritage over hype.</li>
-        >Comfort-focused with innovation.</li>
-      </ul>
-    </section>
-
-    <section class="section">
-      <h2>Secondary Association: La Rotonda</h2>
-      [image:12]
-      
-      <p>Palladian timelessness in Vicenza mirrors brand integrity; ties to Veneto leather heritage.</p>
-    </section>
-
-    <section class="section">
-      <h2>Current Challenge</h2>
-      <div class="challenge">
-        <p><strong>Generational Renewal:</strong> Attract youth while preserving discretion amid noisy competitors.</p>
+  <div class="content-wrapper">
+    
+    <section class="section reveal">
+      <div class="s-label">01 / Overview</div>
+      <div>
+        <h2>The Bottega <em>Essence</em></h2>
+        <p>Quiet luxury defined by artisanal excellence. Bottega Veneta remains a pillar of "Invisible Luxury," where the product speaks through the iconic Intrecciato weave rather than a logo.</p>
+        <div class="image-placeholder">[ ARCHIVAL IMAGE ]</div>
       </div>
     </section>
 
-    <section class="section full-width">
-      <h2>Activation Ideas</h2>
-      [image:19]
-      
-      <ul>
-        ><strong>Fashion Show:</strong> Inside La Rotonda; geometric intrecciato collection from local materials.</li>
-        ><strong>Museum:</strong> Permanent exhibit with user content; free for under-26s.</li>
-      </ul>
+    <section class="section reveal">
+      <div class="s-label">02 / Strategy</div>
+      <div>
+        <h2>Secondary Association: <em>La Rotonda</em></h2>
+        <p>By linking the brand to Palladio’s architectural masterpiece in Vicenza, we anchor Bottega Veneta to a timeless cultural legacy, transcending fashion to become a symbol of Italian heritage.</p>
+        <ul>
+          <li>Palladian Geometric Alignment</li>
+          <li>Veneto Artisanal Integration</li>
+          <li>Architectural Integrity & Brand Ethics</li>
+        </ul>
+      </div>
     </section>
+
+    <section class="section reveal">
+      <div class="s-label">03 / Activation</div>
+      <div>
+        <h2>Engaging <em>Gen-Z</em></h2>
+        <p>The challenge: attracting a younger demographic without eroding exclusivity. Our solution merges physical history with digital storytelling.</p>
+        <div class="image-placeholder">[ RUNWAY AT LA ROTONDA ]</div>
+        <ul>
+          <li><strong>The Museum:</strong> A permanent exhibit at Villa La Rotonda featuring user-generated craftsmanship stories.</li>
+          <li><strong>Cultural Inclusion:</strong> Free access for artisans under 26 to foster new-age connoisseurship.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section reveal">
+      <div class="s-label">04 / Impact</div>
+      <div>
+        <h2>Expected <em>Outcomes</em></h2>
+        <p>Elevating the brand from a luxury manufacturer to a cultural institution.</p>
+        <ul>
+          <li>Strengthened authentic connection with younger HNWIs.</li>
+          <li>Amplified sustainability through local Veneto sourcing.</li>
+          <li>Premium positioning through architectural exclusivity.</li>
+        </ul>
+      </div>
+    </section>
+
   </div>
 
-  <section class="section full-width">
-    <h2>Expected Impact</h2>
-    [image:20]
-    
-    <ul>
-      >Deepens youth connection to authentic roots.</li>
-      >Amplifies sustainability via Veneto sourcing.</li>
-      >Heightens exclusivity for premium positioning.</li>
-    </ul>
-  </section>
-
   <footer>
-    <p>Part of <a href="https://grassifederica.github.io" style="color: var(--accent-olive);">Federica Grassi's Portfolio</a> | 2026</p>
+    <p>FEDERICA GRASSI — MILAN — 2026</p>
   </footer>
+
+  <script>
+    // CURSORE
+    const cur = document.getElementById('cur'), ring = document.getElementById('cur-r');
+    let mx = 0, my = 0, rx = 0, ry = 0;
+    document.addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; cur.style.left = mx + 'px'; cur.style.top = my + 'px'; });
+    (function loop() { rx += (mx - rx) * 0.15; ry += (my - ry) * 0.15; ring.style.left = rx + 'px'; ring.style.top = ry + 'px'; requestAnimationFrame(loop); })();
+
+    // REVEAL
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
 </body>
 </html>
