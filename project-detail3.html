@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eataly Case Study — Federica Grassi</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,700;0,6..96,900;1,6..96,400;1,6..96,700;1,6..96,900&family=Raleway:wght@300;400;600&family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --eataly-red: #B02B2C;
+      --slate: #2C2E35;
+      --cream: #F9F7F2;
+      --white: #FFFFFF;
+      --glass: rgba(255, 255, 255, 0.8);
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    
+    body {
+      background: var(--cream);
+      color: var(--slate);
+      font-family: 'Raleway', sans-serif;
+      line-height: 1.7;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* HEADER */
+    header {
+      padding: 140px 72px 60px;
+      max-width: 1200px;
+      margin: 0 auto;
+      text-align: left;
+    }
+
+    .back-link {
+      font-family: 'Cinzel', serif;
+      text-decoration: none;
+      color: var(--eataly-red);
+      font-size: 13px;
+      letter-spacing: 2px;
+      display: inline-block;
+      margin-bottom: 40px;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      font-family: 'Bodoni Moda', serif;
+      font-size: 84px;
+      font-weight: 900;
+      line-height: 1;
+      color: var(--slate);
+      margin-bottom: 10px;
+    }
+
+    .subtitle {
+      font-family: 'Raleway', sans-serif;
+      font-size: 22px;
+      font-weight: 300;
+      color: var(--eataly-red);
+      letter-spacing: 1px;
+    }
+
+    /* SECTION LAYOUT */
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 72px 100px;
+    }
+
+    .section {
+      padding: 80px 0;
+      border-bottom: 1px solid rgba(0,0,0,0.05);
+    }
+
+    .s-label {
+      font-family: 'Cinzel', serif;
+      font-size: 14px;
+      color: var(--eataly-red);
+      margin-bottom: 20px;
+      display: block;
+      font-weight: 700;
+    }
+
+    h2 {
+      font-family: 'Bodoni Moda', serif;
+      font-size: 42px;
+      margin-bottom: 30px;
+    }
+
+    p {
+      font-size: 18px;
+      margin-bottom: 20px;
+      color: #444;
+    }
+
+    /* AI BOT INTERFACE ELEMENT */
+    .ai-box {
+      background: var(--white);
+      border-radius: 20px;
+      padding: 30px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+      margin: 40px 0;
+      border-left: 5px solid var(--eataly-red);
+    }
+
+    .ai-header {
+      display: flex;
+      align-items: center;
+      margin-bottom: 15px;
+    }
+
+    .ai-avatar {
+      width: 50px;
+      height: 50px;
+      background: #eee;
+      border-radius: 50%;
+      margin-right: 15px;
+    }
+
+    .ai-bubble {
+      background: #f0f0f0;
+      padding: 15px 20px;
+      border-radius: 15px;
+      display: inline-block;
+      font-style: italic;
+    }
+
+    /* LIST STYLE */
+    ul { list-style: none; }
+    ul li {
+      padding: 15px 0;
+      display: flex;
+      align-items: flex-start;
+      border-bottom: 1px solid rgba(0,0,0,0.03);
+    }
+
+    ul li strong {
+      min-width: 180px;
+      color: var(--eataly-red);
+      text-transform: uppercase;
+      font-size: 14px;
+      letter-spacing: 1px;
+    }
+
+    /* INFOGRAPHIC MOCKUP */
+    .infographic {
+      width: 100%;
+      background: var(--slate);
+      color: var(--white);
+      padding: 40px;
+      border-radius: 10px;
+      text-align: center;
+      margin: 40px 0;
+    }
+
+    footer {
+      text-align: center;
+      padding: 80px 0;
+      font-family: 'Raleway', sans-serif;
+      font-size: 14px;
+      opacity: 0.6;
+    }
+
+    @media (max-width: 768px) {
+      h1 { font-size: 50px; }
+      header, .container { padding: 40px 24px; }
+      ul li { flex-direction: column; }
+      ul li strong { margin-bottom: 5px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <a href="index.html" class="back-link">← Back to Portfolio</a>
+    <h1>Eataly</h1>
+    <p class="subtitle">Omnichannel Innovation & AI Navigation</p>
+  </header>
+
+  <div class="container">
+
+    <section class="section">
+      <div class="s-label">01 / The Vision</div>
+      <h2>Reconnecting with <em>Meaning</em></h2>
+      <p>Modern consumers demand transparency that transforms ingredients from commodities into living narratives of heritage[cite: 91]. We chose Eataly to bridge the gap between strong culinary tradition and the need for digital seamlessness.</p>
+      
+      <div class="ai-box">
+        <div class="ai-header">
+          <div class="ai-avatar"></div>
+          <strong>MARIO AI</strong>
+        </div>
+        <div class="ai-bubble">"Hi, I'm Mario, how can I help you?" [cite: 67, 125]</div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="s-label">02 / The Challenge</div>
+      <h2>The Engagement <em>Gap</em></h2>
+      <p>Gen-Z recognizes Eataly’s cultural relevance but suffers from low purchase frequency and decision fatigue when navigating the complex physical store[cite: 78, 79, 184].</p>
+      <ul>
+        <li><strong>Consumer Mantra:</strong> "Quality I can trace, technology I can trust".</li>
+        <li><strong>Barriers:</strong> Feeling overwhelmed by choices and a limited in-store experience[cite: 79, 184].</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <div class="s-label">03 / The New Solution</div>
+      <h2>AI Totems &amp; <em>Human Connection</em></h2>
+      <p>Our solution features AI totems that act as personal navigators[cite: 119]. Technology acts as a silent assistant, personalizing the journey without becoming an intrusive barrier[cite: 93].</p>
+      <ul>
+        <li><strong>Transparency:</strong> Users scan products to see the entire supply chain, from origin to store[cite: 120].</li>
+        <li><strong>Navigation:</strong> Totems provide real-time paths to items and seasonal recipe suggestions[cite: 119].</li>
+        <li><strong>Human Touch:</strong> Digital guidance leads shoppers to specialized employees, empowering staff as cultural stewards[cite: 191, 205].</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <div class="s-label">04 / Infinite Journey</div>
+      <h2>Seamless <em>Integration</em></h2>
+      <p>The experience begins pre-store with web browsing and pre-orders, moving into an exploratory in-store phase guided by AI and human interaction[cite: 194, 195].</p>
+      
+      <div class="infographic">
+        <h3 style="margin-bottom: 20px; font-family: 'Bodoni Moda';">The Customer Loop [cite: 221]</h3>
+        <p style="color: #ccc; font-size: 14px;">Browsing → Exploring → Interaction → Human Connection → Post-Purchase Learning [cite: 243, 227, 230, 251, 210]</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="s-label">05 / Expected Impact</div>
+      <h2>Redefining the <em>Product</em></h2>
+      <p>Retail transcends price wars to compete on trust[cite: 98]. Products are no longer just goods, but carriers of culture[cite: 100].</p>
+      <ul>
+        <li><strong>For the Customer:</strong> A sense of clarity, personalization, and confidence in their moral and ethical choices[cite: 115, 205].</li>
+        <li><strong>For the Employee:</strong> Empowerment as an "Expert" with purpose, providing the cultural depth that completes the digital journey[cite: 208, 209].</li>
+      </ul>
+    </section>
+
+  </div>
+
+  <footer>
+    <p>Case Study Developed by Federica Grassi et al. | 2026 [cite: 71]</p>
+  </footer>
+
+</body>
+</html>
