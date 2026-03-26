@@ -4,16 +4,16 @@
   <title>Bottega Veneta Case Study - Federica Grassi</title>
   <style>
     :root {
-      --bg-primary: #FAF9F6; /* Off-white, quiet luxury base [web:6] */
+      --bg-primary: #F8F4F0; /* Cream, quiet luxury [web:6] */
       --bg-secondary: #FFFFFF;
-      --text-primary: #000000; /* Black for discretion [web:5] */
-      --accent-beige: #D2B48C; /* Warm tan leather nod [web:2] */
-      --accent-green: #8FBC8F; /* Subtle Vicenza green [file:1][web:2] */
+      --text-primary: #000000; /* Iconic black [web:5] */
+      --accent-tan: #C19A6B; /* Intrecciato leather tan [web:2][image:14] */
+      --accent-olive: #556B2F; /* Subtle Vicenza heritage [file:1][image:12] */
       --shadow: 0 4px 20px rgba(0,0,0,0.1);
     }
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
-      font-family: 'Georgia', serif; /* Timeless, artisanal feel [file:1] */
+      font-family: 'Georgia', serif;
       background: var(--bg-primary);
       color: var(--text-primary);
       line-height: 1.7;
@@ -24,7 +24,7 @@
     header {
       text-align: center;
       padding: 3rem 0;
-      border-bottom: 2px solid var(--accent-beige);
+      border-bottom: 2px solid var(--accent-tan);
       margin-bottom: 3rem;
     }
     h1 {
@@ -34,7 +34,7 @@
     }
     .subtitle {
       font-size: 1.2rem;
-      color: var(--accent-green);
+      color: var(--accent-olive);
       font-style: italic;
     }
     .project-grid {
@@ -48,12 +48,21 @@
       padding: 2rem;
       border-radius: 8px;
       box-shadow: var(--shadow);
-      border-left: 4px solid var(--accent-beige);
+      border-left: 4px solid var(--accent-tan);
+      position: relative;
     }
     .section h2 {
-      color: var(--accent-green);
+      color: var(--accent-olive);
       margin-bottom: 1rem;
       font-size: 1.8rem;
+    }
+    .section img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin: 1rem 0;
+      box-shadow: var(--shadow);
     }
     ul { list-style: none; padding-left: 0; }
     ul li {
@@ -63,26 +72,30 @@
     }
     ul li::before {
       content: '—';
-      color: var(--accent-beige);
+      color: var(--accent-tan);
       font-weight: bold;
       position: absolute;
       left: 0;
     }
     .challenge {
       grid-column: span 2;
-      background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--accent-beige) 100%);
+      background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--accent-tan) 10%);
+    }
+    .full-width {
+      grid-column: span 2;
     }
     footer {
       text-align: center;
       padding: 2rem;
       color: #666;
-      border-top: 1px solid var(--accent-beige);
+      border-top: 1px solid var(--accent-tan);
       margin-top: 3rem;
     }
     @media (max-width: 768px) {
       .project-grid { grid-template-columns: 1fr; }
       h1 { font-size: 2rem; }
       body { padding: 1rem; }
+      .section img { height: 180px; }
     }
   </style>
 </head>
@@ -90,56 +103,59 @@
   <header>
     <h1>Bottega Veneta</h1>
     <p class="subtitle">Vicenza 1966 – Luxury Brand Growth Through Secondary Associations</p>
-    <p style="margin-top: 1rem; font-size: 1.1rem;">Federica Grassi, Elisa Brambilla, Sophie von Braun, Ksenia Zhumorovskaia, Alejandra Kerguelen</p>
+    <p style="margin-top: 1rem; font-size: 1.1rem;">Federica Grassi et al.</p>
   </header>
 
   <div class="project-grid">
-    <section class="section">
+    <section class="section full-width">
       <h2>Brand Overview</h2>
-      <p>Quiet luxury built on artisanal leather craftsmanship and discreet, logo-free design with Italian roots.</p>
+      [image:14]
+      
+      <p>Quiet luxury via artisanal intrecciato leather, logo-free design, and Italian bottega roots.</p>
       <ul>
-        <li>Founded in Vicenza's bottegas, handcrafted heritage.</li>
-        <li>Targets high-net-worth individuals valuing quality over logos; Gen-Z sees it as heritage investment.</li>
-        <li>Prioritizes comfort with selective innovation.</li>
+        >High-net-worth and Gen-Z valuing heritage over hype.</li>
+        >Comfort-focused with innovation.</li>
       </ul>
+    </section>
+
+    <section class="section">
+      <h2>Secondary Association: La Rotonda</h2>
+      [image:12]
+      
+      <p>Palladian timelessness in Vicenza mirrors brand integrity; ties to Veneto leather heritage.</p>
     </section>
 
     <section class="section">
       <h2>Current Challenge</h2>
       <div class="challenge">
-        <p><strong>Cultural Relevance & Generational Renewal:</strong> Preserve discretion and artisanal DNA while attracting younger audiences. Staying silent risks slower growth vs. logo-heavy rivals.</p>
+        <p><strong>Generational Renewal:</strong> Attract youth while preserving discretion amid noisy competitors.</p>
       </div>
     </section>
 
-    <section class="section">
-      <h2>Secondary Association</h2>
-      <p>Link to <strong>La Rotonda</strong> in Vicenza – Palladian architecture symbolizing timelessness and integrity.</p>
+    <section class="section full-width">
+      <h2>Activation Ideas</h2>
+      [image:19]
+      
       <ul>
-        <li>Elevates products to structural masterpieces.</li>
-        <li>Reinforces Veneto leather authenticity and sustainability narrative.</li>
-      </ul>
-    </section>
-
-    <section class="section">
-      <h2>Activation</h2>
-      <ul>
-        <li><strong>Fashion Show:</strong> Inside La Rotonda; Renaissance-inspired, Veneto-sourced materials; geometric intrecciato nods.</li>
-        <li><strong>Permanent Museum:</strong> Brand history exhibit; user-generated content; free for under-26s.</li>
+        ><strong>Fashion Show:</strong> Inside La Rotonda; geometric intrecciato collection from local materials.</li>
+        ><strong>Museum:</strong> Permanent exhibit with user content; free for under-26s.</li>
       </ul>
     </section>
   </div>
 
-  <section class="section" style="grid-column: span 2;">
+  <section class="section full-width">
     <h2>Expected Impact</h2>
+    [image:20]
+    
     <ul>
-      <li>Connects youth to roots for authenticity.</li>
-      <li>Boosts sustainability perception via long-lasting products.</li>
-      <li>Reinforces exclusivity, justifying premium pricing.</li>
+      >Deepens youth connection to authentic roots.</li>
+      >Amplifies sustainability via Veneto sourcing.</li>
+      >Heightens exclusivity for premium positioning.</li>
     </ul>
   </section>
 
   <footer>
-    <p>Part of <a href="https://grassifederica.github.io" style="color: var(--accent-green);">Federica Grassi's Portfolio</a> &nbsp; | &nbsp; 2026</p>
+    <p>Part of <a href="https://grassifederica.github.io" style="color: var(--accent-olive);">Federica Grassi's Portfolio</a> | 2026</p>
   </footer>
 </body>
 </html>
