@@ -1,8 +1,11 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Federica Grassi — Bottega Veneta Project</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet">
 <style>
 * { box-sizing:border-box; margin:0; padding:0; }
@@ -328,7 +331,6 @@ body {
   font-size:.54rem; letter-spacing:.28em; text-transform:uppercase;
   color:var(--light);
 }
-.closing-text {}
 .closing-eyebrow {
   font-size:.6rem; letter-spacing:.44em; text-transform:uppercase;
   color:var(--bv); margin-bottom:32px;
@@ -364,6 +366,36 @@ body {
   color:var(--ink);
 }
 
+.top-nav {
+  text-align: center;
+  padding: 10px 0;
+  border-top: 1px solid rgba(0,0,0,0.05);
+}
+
+.back-link {
+  font-family: 'Jost', sans-serif;
+  font-size: 14px;
+  color: var(--bv-dark);
+  text-decoration: none;
+  border-bottom: 1px solid var(--bv-dark);
+}
+
+.back-link:focus-visible {
+  outline: 2px solid var(--bv-dark);
+  outline-offset: 2px;
+}
+
+.footer-note {
+  text-align: center;
+  padding: 60px 0;
+  border-top: 1px solid rgba(0,0,0,0.05);
+}
+
+.footer-note p {
+  font-family: 'Jost', sans-serif;
+  font-size: 14px;
+}
+
 /* ── ANIMATIONS ── */
 .reveal { opacity:0; transform:translateY(28px); transition:opacity .9s ease,transform .9s ease; }
 .reveal.in { opacity:1; transform:translateY(0); }
@@ -382,10 +414,8 @@ body {
 </head>
 <body>
 <!-- ═══ HEADER ═══ -->
-  <header style="text-align: center; padding: 10px 0; border-top: 1px solid rgba(0,0,0,0.05);">
-  <p style="font-family: 'Georgia', serif; font-size: 14px;">
-      back to <a href="index.html" style="color: var(--accent-olive); text-decoration: none; border-bottom: 1px solid var(--accent-olive);">Portfolio</a> 
-  </p>
+  <header class="top-nav">
+    <a href="index.html#projects" class="back-link" aria-label="Back to portfolio home">← Back to Portfolio</a>
   </header>
   
 <!-- ═══ COVER ═══ -->
@@ -565,9 +595,9 @@ body {
   </div>
 </section>
 
-<footer style="text-align: center; padding: 60px 0; border-top: 1px solid rgba(0,0,0,0.05);">
-    <p style="font-family: 'Georgia', serif; font-size: 14px;">
-      Part of <a href="index.html" style="color: var(--accent-olive); text-decoration: none; border-bottom: 1px solid var(--accent-olive);">Federica Grassi's Portfolio</a> | 2026
+<footer class="footer-note">
+    <p>
+      Part of <a href="index.html" class="back-link">Federica Grassi's Portfolio</a> | 2026
     </p>
 </footer>
 <!-- ═══ BV MARK ═══ -->
@@ -587,3 +617,4 @@ const obs = new IntersectionObserver(entries => {
 document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
 </script>
 </body>
+</html>
