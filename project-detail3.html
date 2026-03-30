@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Eataly Case Study — Federica Grassi</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,700;0,6..96,900;1,6..96,400;1,6..96,700;1,6..96,900&family=Raleway:wght@300;400;600&family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
   <style>
     :root {
@@ -42,6 +44,11 @@
       display: inline-block;
       margin-bottom: 40px;
       text-transform: uppercase;
+    }
+
+    .back-link:focus-visible {
+      outline: 2px solid var(--eataly-red);
+      outline-offset: 2px;
     }
 
     h1 {
@@ -154,6 +161,16 @@
       margin: 40px 0;
     }
 
+    .infographic-title {
+      margin-bottom: 20px;
+      font-family: 'Bodoni Moda', serif;
+    }
+
+    .infographic-copy {
+      color: #ccc;
+      font-size: 14px;
+    }
+
     footer {
       text-align: center;
       padding: 80px 0;
@@ -173,7 +190,7 @@
 <body>
 
   <header>
-    <a href="index.html" class="back-link">← Back to Portfolio</a>
+    <a href="index.html#projects" class="back-link" aria-label="Back to portfolio home">← Back to Portfolio</a>
     <h1>Eataly</h1>
     <p class="subtitle">Omnichannel Innovation & AI Navigation</p>
   </header>
@@ -221,8 +238,8 @@
       <p>The experience begins pre-store with web browsing and pre-orders, moving into an exploratory in-store phase guided by AI and human interaction.</p>
       
       <div class="infographic">
-        <h3 style="margin-bottom: 20px; font-family: 'Bodoni Moda';">The Customer Loop </h3>
-        <p style="color: #ccc; font-size: 14px;">Browsing → Exploring → Interaction → Human Connection → Post-Purchase Learning </p>
+        <h3 class="infographic-title">The Customer Loop</h3>
+        <p class="infographic-copy">Browsing → Exploring → Interaction → Human Connection → Post-Purchase Learning</p>
       </div>
     </section>
 
