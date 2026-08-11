@@ -195,12 +195,15 @@
       transform: scale(1.05);
     }
 
-    /* ELENCHI CON PUNTO ACCENTO VERDE BOTTEGA */
-    ul li { list-style: none; margin-top: 25px; }
+  /* LIST STYLE CON ALLINEAMENTO PERFETTO IN VERTICALE */
+    ul { 
+      list-style: none; 
+      margin-top: 30px; 
+    }
 
     ul li {
-      padding: 16px 0;
-      font-size: 17px;
+      padding: 18px 0;
+      font-size: 20px;
       display: flex;
       align-items: flex-start;
       border-bottom: 1px solid rgba(0, 0, 0, 0.04);
@@ -211,22 +214,23 @@
       color: var(--bottega-green);
       font-size: 24px;
       line-height: 1;
-      margin-right: 18px;
+      margin-right: 15px;
+      flex-shrink: 0;
     }
 
     ul li strong {
-      min-width: 170px;
-      font-family: 'Cinzel', serif;
+      width: 240px;             /* <--- FORZA la stessa larghezza per tutte le etichette */
+      min-width: 240px;         /* Impedisce che si restringa */
+      font-family: 'Monserrat', serif;
       font-size: 15px;
       font-weight: 800;
       letter-spacing: 1.5px;
       color: var(--text-primary);
-      display: inline-block;
-      margin-right: 20px;
-      flex-shrink: 0;
       text-transform: uppercase;
+      flex-shrink: 0;           /* Mantiene la colonna rigida */
+      padding-right: 20px;      /* Spazio fisso prima del testo */
     }
-
+    
     /* FOOTER */
     footer {
       text-align: center;
