@@ -6,17 +6,23 @@
   <title>Bottega Veneta Case Study — Federica Grassi</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Cinzel:wght@500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg-primary: #F7F6F2; /* Sfondo pietra palladiana e crema lusso */
-      --text-primary: #111111; /* Nero satinato pulito */
-      --bottega-green: #1aa36d; /* L'ESATTO VERDE PARAKEET BOTTEGA VENETA */
+      --bg-primary: #F5F3ED; /* Pietra Palladiana / Crema Studio */
+      --text-primary: #0A0A0B; /* Nero satinato */
+      --bottega-green: #1AA36D; /* Verde Bottega */
       --bottega-green-dark: #008000;
-      --palladian-slate: #1C1E21; /* Grigio/Nero architettonico */
-      --intrecciato-tan: #8C6D46; /* Dettagli cuoio */
-      --border-light: rgba(0, 0, 0, 0.08);
+      --palladian-slate: #1C1E21;
+      --intrecciato-tan: #8C6D46; /* Toni cuoio */
+      --border-light: rgba(10, 10, 11, 0.1);
       --white: #FFFFFF;
+
+      /* ESCALA TIPOGRAFICA FLUIDA */
+      --fs-h1: clamp(40px, 7vw, 84px);
+      --fs-h2: clamp(26px, 4vw, 42px);
+      --fs-sub: clamp(12px, 1.8vw, 16px);
+      --fs-body: clamp(15px, 1.2vw, 18px);
     }
 
     * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -25,6 +31,7 @@
       background: var(--bg-primary);
       color: var(--text-primary);
       font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: var(--fs-body);
       line-height: 1.8;
       overflow-x: hidden;
       -webkit-font-smoothing: antialiased;
@@ -32,7 +39,7 @@
 
     /* HEADER */
     header {
-      padding: 130px 72px 70px;
+      padding: clamp(50px, 8vw, 120px) clamp(20px, 5vw, 72px) 40px;
       max-width: 1200px;
       margin: 0 auto;
       text-align: center;
@@ -42,50 +49,54 @@
       font-family: 'Cinzel', serif;
       text-decoration: none;
       color: var(--text-primary);
-      font-size: 14px;
+      font-size: clamp(11px, 1vw, 13px);
       font-weight: 700;
-      letter-spacing: 4px;
+      letter-spacing: 3px;
       text-transform: uppercase;
       display: inline-block;
-      margin-bottom: 60px;
-      transition: color 0.3s ease;
+      margin-bottom: 40px;
+      padding: 8px 20px;
+      border: 1px solid var(--border-light);
+      border-radius: 100px;
+      transition: all 0.3s ease;
     }
 
     .back-link:hover {
-      color: var(--bottega-green-dark);
+      background: var(--text-primary);
+      color: var(--bg-primary);
+      border-color: var(--text-primary);
     }
 
-    /* TITOLO PULITO: INTERAMENTE IN MAIUSCOLO E STESSO STILE */
     h1 {
-      font-family: 'Monserrat', serif;
-      font-size: 80px;
+      font-family: 'Cinzel', serif;
+      font-size: var(--fs-h1);
       font-weight: 800;
-      line-height: 1;
-      letter-spacing: 3px;
+      line-height: 0.95;
+      letter-spacing: 2px;
       color: var(--text-primary);
       text-transform: uppercase;
       margin-bottom: 20px;
     }
 
     .subtitle {
-      font-family: 'Monserrat', serif;
-      font-size: 20px;
-      font-weight: 800;
+      font-family: 'Cinzel', serif;
+      font-size: var(--fs-sub);
+      font-weight: 700;
       color: var(--intrecciato-tan);
       letter-spacing: 3px;
       text-transform: uppercase;
     }
 
-    /* CITAZIONE STILE ARCHITETTURA PULITA */
+    /* CITAZIONE RINASCIMENTALE x GEN Z */
     .bottega-quote {
-      font-family: 'Georgia', serif;
-      font-size: 30px;
-      font-weight: 400;
+      font-family: 'Cinzel', serif;
+      font-size: clamp(20px, 3.5vw, 32px);
+      font-weight: 700;
       color: var(--text-primary);
       text-align: center;
-      margin: 60px auto 100px;
-      max-width: 750px;
-      padding: 40px 20px;
+      margin: 40px auto 80px;
+      max-width: 800px;
+      padding: 35px 20px;
       border-top: 1px solid var(--text-primary);
       border-bottom: 1px solid var(--text-primary);
       position: relative;
@@ -97,63 +108,58 @@
       bottom: -3px;
       left: 50%;
       transform: translateX(-50%);
-      width: 60px;
+      width: 70px;
       height: 5px;
       background: var(--bottega-green);
     }
 
-    /* CONTENT SYSTEM */
+    /* CONTENT WRAPPER */
     .content-wrapper {
       max-width: 1100px;
       margin: 0 auto;
-      padding: 0 72px 140px;
+      padding: 0 clamp(20px, 5vw, 72px) 100px;
     }
 
     .section {
-      padding: 90px 0;
+      padding: clamp(50px, 6vw, 90px) 0;
       border-bottom: 1px solid var(--border-light);
     }
 
     .section:last-child { border-bottom: none; }
 
     .s-label {
-      font-family: 'Monserrat', serif;
-      font-size: 15px;
+      font-family: 'Cinzel', serif;
+      font-size: clamp(11px, 1vw, 13px);
       font-weight: 800;
       letter-spacing: 3px;
       color: var(--intrecciato-tan);
       text-transform: uppercase;
-      margin-bottom: 15px;
+      margin-bottom: 12px;
       display: block;
     }
 
     h2 {
-      font-family: 'Georgia', serif;
-      font-size: 45px;
-      font-weight: 500;
-      line-height: 1.15;
+      font-family: 'Syne', sans-serif;
+      font-size: var(--fs-h2);
+      font-weight: 800;
+      line-height: 1.1;
       margin-bottom: 25px;
       color: var(--text-primary);
-      letter-spacing: -0.5px;
+      text-transform: uppercase;
     }
 
     p {
-      font-size: 18px;
       color: #2D2D2D;
       margin-bottom: 20px;
       font-weight: 400;
     }
 
-    /* GRID E CERCHI RINASCIMENTALI MINIMALI */
+    /* GRID & CIRCULAR IMAGES (TONDO RINASCIMENTALE) */
     .grid-section {
       display: grid;
-      grid-template-columns: 1.2fr 0.8fr;
-      gap: 60px;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: clamp(30px, 5vw, 60px);
       align-items: center;
-    }
-
-    .grid-section.reverse {
-      grid-template-columns: 0.8fr 1.2fr;
     }
 
     .circle-img-container {
@@ -161,11 +167,12 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      margin: 20px 0;
     }
 
     .circle-img {
-      width: 300px;
-      height: 300px;
+      width: clamp(220px, 25vw, 300px);
+      height: clamp(220px, 25vw, 300px);
       border-radius: 50%;
       object-fit: cover;
       background: var(--white);
@@ -177,99 +184,84 @@
     .circle-img-container::before {
       content: '';
       position: absolute;
-      width: 320px;
-      height: 320px;
+      width: clamp(236px, 26.5vw, 320px);
+      height: clamp(236px, 26.5vw, 320px);
       border-radius: 50%;
-      border: 1px solid var(--bottega-green);
-      opacity: 0.6;
+      border: 1px dashed var(--bottega-green);
+      opacity: 0.7;
       transition: all 0.4s ease;
     }
 
     .circle-img-container:hover .circle-img {
       transform: scale(1.02);
-      box-shadow: 0 20px 40px rgba(0, 229, 82, 0.2);
+      box-shadow: 0 20px 40px rgba(26, 163, 109, 0.25);
     }
 
     .circle-img-container:hover::before {
       opacity: 1;
-      transform: scale(1.05);
+      transform: rotate(15deg);
     }
 
-  /* LIST STYLE CON ALLINEAMENTO PERFETTO IN VERTICALE */
+    /* LIST STYLE CON ALLINEAMENTO PERFETTO IN VERTICALE */
     ul { 
       list-style: none; 
-      margin-top: 30px; 
+      margin-top: 25px; 
     }
 
     ul li {
-      padding: 18px 0;
-      font-size: 20px;
+      padding: 16px 0;
       display: flex;
       align-items: flex-start;
-      border-bottom: 1px solid rgba(0, 0, 0, 0.04);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
     }
 
     ul li::before {
-      content: '•';
+      content: '❖';
       color: var(--bottega-green);
-      font-size: 24px;
+      font-size: 14px;
       line-height: 1;
       margin-right: 15px;
       flex-shrink: 0;
+      margin-top: 6px;
     }
 
     ul li strong {
-      width: 240px;             /* <--- FORZA la stessa larghezza per tutte le etichette */
-      min-width: 240px;         /* Impedisce che si restringa */
-      font-family: 'Monserrat', serif;
-      font-size: 15px;
+      width: clamp(160px, 20vw, 220px);
+      min-width: clamp(160px, 20vw, 220px);
+      font-family: 'Cinzel', serif;
+      font-size: clamp(12px, 1.1vw, 14px);
       font-weight: 800;
       letter-spacing: 1.5px;
       color: var(--text-primary);
       text-transform: uppercase;
-      flex-shrink: 0;           /* Mantiene la colonna rigida */
-      padding-right: 20px;      /* Spazio fisso prima del testo */
+      flex-shrink: 0;
+      padding-right: 15px;
     }
-    
+
     /* FOOTER */
     footer {
       text-align: center;
-      padding: 90px 72px;
-      background: var(--white);
+      padding: 60px 20px;
+      background: var(--text-primary);
       color: var(--white);
       font-family: 'Cinzel', serif;
       font-size: 12px;
-      letter-spacing: 3px;
+      letter-spacing: 2px;
     }
 
     footer a {
       color: var(--bottega-green);
       text-decoration: none;
-      font-weight: 800;
+      font-weight: 700;
     }
 
     footer a:hover {
       text-decoration: underline;
     }
 
-    @media (max-width: 900px) {
-      .grid-section, .grid-section.reverse {
-        grid-template-columns: 1fr;
-        gap: 40px;
-      }
-      .grid-section.reverse .circle-img-container {
-        grid-row: 2;
-      }
-      .circle-img { width: 250px; height: 250px; }
-      .circle-img-container::before { width: 268px; height: 268px; }
-    }
-
     @media (max-width: 768px) {
-      header, .content-wrapper { padding: 60px 24px; }
-      h1 { font-size: 46px; letter-spacing: 3px; }
-      h2 { font-size: 32px; }
       ul li { flex-direction: column; }
-      ul li strong { margin-bottom: 6px; }
+      ul li strong { margin-bottom: 6px; width: auto; min-width: 0; }
     }
   </style>
 </head>
@@ -311,7 +303,7 @@
 
     <!-- SEZIONE 02 -->
     <section class="section">
-      <div class="grid-section reverse">
+      <div class="grid-section">
         <div class="circle-img-container">
           <img class="circle-img" src="image/bottega_challenge.png" alt="Luxury Architecture and Heritage">
         </div>
@@ -346,7 +338,7 @@
 
     <!-- SEZIONE 04 -->
     <section class="section">
-      <div class="grid-section reverse">
+      <div class="grid-section">
         <div class="circle-img-container">
           <img class="circle-img" src="image/bottega_activation.png" alt="Bottega Veneta Exhibition Event">
         </div>
@@ -382,8 +374,9 @@
     </section>
 
   </div>
-<footer>
-    <p>Part of <a href="index.html">Federica Grassi's Portfolio </a> | 2026</p>
+
+  <footer>
+    <p>Part of <a href="index.html">Federica Grassi's Portfolio</a> | 2026</p>
   </footer>
 
 </body>
