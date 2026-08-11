@@ -6,7 +6,7 @@
   <title>Bottega Veneta Case Study — Federica Grassi</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
   <style>
     :root {
       --bg-primary: #F5F3ED; /* Pietra Palladiana / Crema Studio */
@@ -18,11 +18,11 @@
       --border-light: rgba(10, 10, 11, 0.12);
       --white: #FFFFFF;
 
-      /* ESCALA TIPOGRAFICA FLUIDA */
-      --fs-h1: clamp(42px, 7.5vw, 88px);
-      --fs-h2: clamp(28px, 4vw, 44px);
-      --fs-sub: clamp(13px, 1.8vw, 16px);
-      --fs-body: clamp(15px, 1.2vw, 18px);
+      /* TIPOGRAFIA FLUIDA */
+      --fs-h1: clamp(40px, 7vw, 84px);
+      --fs-h2: clamp(26px, 3.5vw, 38px);
+      --fs-sub: clamp(12px, 1.8vw, 15px);
+      --fs-body: clamp(15px, 1.2vw, 17px);
     }
 
     * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -50,7 +50,7 @@
       text-decoration: none;
       color: var(--text-primary);
       font-size: clamp(11px, 1vw, 13px);
-      font-weight: 700;
+      font-weight: 600;
       letter-spacing: 3px;
       text-transform: uppercase;
       display: inline-block;
@@ -70,9 +70,9 @@
     h1 {
       font-family: 'Cinzel', serif;
       font-size: var(--fs-h1);
-      font-weight: 800;
+      font-weight: 700;
       line-height: 0.95;
-      letter-spacing: 2px;
+      letter-spacing: 3px;
       color: var(--text-primary);
       text-transform: uppercase;
       margin-bottom: 20px;
@@ -81,30 +81,35 @@
     .subtitle {
       font-family: 'Cinzel', serif;
       font-size: var(--fs-sub);
-      font-weight: 700;
+      font-weight: 600;
       color: var(--intrecciato-tan);
       letter-spacing: 3px;
       text-transform: uppercase;
     }
 
-    /* HERO BANNER INIZIALE (RICCHEZZA VISIVA) */
-    .hero-banner-container {
-      max-width: 1100px;
-      margin: 30px auto 50px;
-      padding: 0 clamp(20px, 5vw, 72px);
+    /* HERO BANNER A TUTTO SCHERMO (A BANDA ORIZZONTALE) */
+    .hero-banner-wrapper {
+      width: 100vw;
+      position: relative;
+      left: 50%;
+      right: 50%;
+      margin-left: -50vw;
+      margin-right: -50vw;
+      margin-top: 30px;
+      margin-bottom: 60px;
+      overflow: hidden;
     }
 
     .hero-banner {
       width: 100%;
-      height: clamp(280px, 35vw, 480px);
-      border-radius: 20px;
+      height: clamp(260px, 32vw, 450px);
       object-fit: cover;
-      border: 1px solid var(--border-light);
-      box-shadow: 0 20px 45px rgba(0, 0, 0, 0.08);
       display: block;
+      border-top: 1px solid var(--border-light);
+      border-bottom: 1px solid var(--border-light);
     }
 
-    /* HIGHLIGHT METRICS / SUMMARY BOX */
+    /* HIGHLIGHT METRICS / SUMMARY BOX RINASCIMENTALE */
     .highlight-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -114,41 +119,43 @@
 
     .highlight-card {
       background: var(--white);
-      padding: 28px 22px;
-      border-radius: 16px;
+      padding: 26px 20px;
+      border-radius: 12px;
       border: 1px solid var(--border-light);
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
-      border-top: 4px solid var(--bottega-green);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
+      border-top: 3px solid var(--bottega-green);
+      text-align: center;
     }
 
     .highlight-label {
       font-family: 'Cinzel', serif;
       font-size: 11px;
-      font-weight: 800;
+      font-weight: 600;
       color: var(--intrecciato-tan);
       letter-spacing: 2px;
       text-transform: uppercase;
-      margin-bottom: 8px;
+      margin-bottom: 6px;
     }
 
     .highlight-value {
-      font-family: 'Syne', sans-serif;
+      font-family: 'Playfair Display', serif;
       font-size: 20px;
-      font-weight: 800;
+      font-weight: 600;
       color: var(--text-primary);
-      text-transform: uppercase;
+      font-style: italic;
     }
 
     /* CITAZIONE RINASCIMENTALE */
     .bottega-quote {
-      font-family: 'Cinzel', serif;
-      font-size: clamp(22px, 3.5vw, 34px);
-      font-weight: 700;
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-size: clamp(22px, 3.5vw, 32px);
+      font-weight: 400;
       color: var(--text-primary);
       text-align: center;
       margin: 40px auto 80px;
       max-width: 850px;
-      padding: 40px 20px;
+      padding: 35px 20px;
       border-top: 1px solid var(--text-primary);
       border-bottom: 1px solid var(--text-primary);
       position: relative;
@@ -160,7 +167,7 @@
       bottom: -3px;
       left: 50%;
       transform: translateX(-50%);
-      width: 80px;
+      width: 70px;
       height: 5px;
       background: var(--bottega-green);
     }
@@ -173,7 +180,7 @@
     }
 
     .section {
-      padding: clamp(60px, 7vw, 100px) 0;
+      padding: clamp(60px, 7vw, 90px) 0;
       border-bottom: 1px solid var(--border-light);
     }
 
@@ -182,7 +189,7 @@
     .s-label {
       font-family: 'Cinzel', serif;
       font-size: clamp(11px, 1vw, 13px);
-      font-weight: 800;
+      font-weight: 700;
       letter-spacing: 3px;
       color: var(--intrecciato-tan);
       text-transform: uppercase;
@@ -191,13 +198,14 @@
     }
 
     h2 {
-      font-family: 'Syne', sans-serif;
+      font-family: 'Cinzel', serif;
       font-size: var(--fs-h2);
-      font-weight: 800;
-      line-height: 1.1;
+      font-weight: 700;
+      line-height: 1.15;
       margin-bottom: 25px;
       color: var(--text-primary);
       text-transform: uppercase;
+      letter-spacing: 1px;
     }
 
     p {
@@ -206,12 +214,12 @@
       font-weight: 400;
     }
 
-    /* GRID & CIRCULAR IMAGES INGRANDITE */
+    /* GRID & CENTRATURA VERTICALE PERFETTA DELLE IMMAGINI */
     .grid-section {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: clamp(40px, 6vw, 70px);
-      align-items: center;
+      align-items: center; /* CENTRATURA VERTICALE PERFETTA */
     }
 
     .circle-img-container {
@@ -219,17 +227,17 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      margin: 20px 0;
+      margin: 10px 0;
     }
 
-    /* IMMAGINI CIRCOLARI INGRANDITE (380px MAX) */
+    /* IMMAGINI CIRCOLARI (MEDAGLIONI) */
     .circle-img {
-      width: clamp(260px, 30vw, 380px);
-      height: clamp(260px, 30vw, 380px);
+      width: clamp(250px, 28vw, 360px);
+      height: clamp(250px, 28vw, 360px);
       border-radius: 50%;
       object-fit: cover;
       background: var(--white);
-      box-shadow: 0 20px 45px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
       border: 2px solid var(--white);
       transition: all 0.5s ease;
     }
@@ -237,17 +245,17 @@
     .circle-img-container::before {
       content: '';
       position: absolute;
-      width: clamp(280px, 32vw, 404px);
-      height: clamp(280px, 32vw, 404px);
+      width: clamp(268px, 30vw, 384px);
+      height: clamp(268px, 30vw, 384px);
       border-radius: 50%;
-      border: 2px dashed var(--bottega-green);
+      border: 1px dashed var(--bottega-green);
       opacity: 0.7;
       transition: all 0.5s ease;
     }
 
     .circle-img-container:hover .circle-img {
       transform: scale(1.03);
-      box-shadow: 0 25px 50px rgba(26, 163, 109, 0.3);
+      box-shadow: 0 20px 45px rgba(26, 163, 109, 0.25);
     }
 
     .circle-img-container:hover::before {
@@ -262,16 +270,16 @@
     }
 
     ul li {
-      padding: 18px 0;
+      padding: 16px 0;
       display: flex;
       align-items: flex-start;
-      border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
     }
 
     ul li::before {
       content: '❖';
       color: var(--bottega-green);
-      font-size: 15px;
+      font-size: 14px;
       line-height: 1;
       margin-right: 15px;
       flex-shrink: 0;
@@ -283,7 +291,7 @@
       min-width: clamp(160px, 20vw, 220px);
       font-family: 'Cinzel', serif;
       font-size: clamp(12px, 1.1vw, 14px);
-      font-weight: 800;
+      font-weight: 700;
       letter-spacing: 1.5px;
       color: var(--text-primary);
       text-transform: uppercase;
@@ -305,7 +313,7 @@
     footer a {
       color: var(--bottega-green);
       text-decoration: none;
-      font-weight: 700;
+      font-weight: 600;
     }
 
     footer a:hover {
@@ -329,8 +337,8 @@
     </div>
   </header>
 
-  <!-- BANNER HERO PRINCIPALE -->
-  <div class="hero-banner-container">
+  <!-- BANNER HERO A TUTTO SCHERMO (BANDA ORIZZONTALE) -->
+  <div class="hero-banner-wrapper">
     <img class="hero-banner" src="image/bottega_impact.png" alt="Bottega Veneta Heritage Architecture">
   </div>
 
