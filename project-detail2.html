@@ -4,12 +4,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Bottega Veneta Case Study — Federica Grassi</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Cinzel:wght@600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,800;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg-primary: #F8F4F0; /* Soft cream, quiet luxury */
-      --text-primary: #1A1A1A; /* Satin black */
-      --accent-olive: #556B2F; /* Palladian Garden Green */
-      --accent-tan: #C19A6B; /* Intrecciato leather tan */
+      --bg-primary: #F7F5F0; /* Pietra palladiana e crema caldissimo */
+      --text-primary: #121212; /* Nero profondo satinato */
+      --bottega-green: #00E65B; /* Iconico Verde Parakeet Bottega Veneta */
+      --palladian-green: #2B3A2C; /* Verde scuro marmo/giardini palladiani */
+      --intrecciato-tan: #8C6D46; /* Toni cuoio naturale */
+      --border-soft: rgba(43, 58, 44, 0.12);
+      --white: #FFFFFF;
     }
 
     * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -17,7 +23,7 @@
     body {
       background: var(--bg-primary);
       color: var(--text-primary);
-      font-family: 'Georgia', serif;
+      font-family: 'Plus Jakarta Sans', sans-serif;
       line-height: 1.8;
       overflow-x: hidden;
       -webkit-font-smoothing: antialiased;
@@ -25,134 +31,261 @@
 
     /* HEADER */
     header {
-      padding: 160px 72px 80px;
+      padding: 140px 72px 80px;
       max-width: 1200px;
       margin: 0 auto;
       text-align: center;
+      position: relative;
     }
 
     .back-link {
-      font-family: 'Georgia', serif;
-      font-style: italic;
+      font-family: 'Cinzel', serif;
       text-decoration: none;
-      color: var(--text-primary);
-      font-size: 14px;
+      color: var(--palladian-green);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
       display: inline-block;
-      margin-bottom: 60px;
-      transition: 0.3s;
+      margin-bottom: 50px;
+      transition: all 0.3s ease;
     }
-    .back-link:hover { color: var(--accent-olive); }
+    
+    .back-link:hover { 
+      color: var(--bottega-green);
+      transform: translateX(-4px);
+    }
 
     .back-link:focus-visible {
-      outline: 2px solid var(--accent-olive);
-      outline-offset: 2px;
+      outline: 2px solid var(--palladian-green);
+      outline-offset: 4px;
     }
 
     h1 {
-      font-family: 'Bodoni Moda', serif;
-      font-size: 72px;
-      font-weight: 700;
-      line-height: 1.1;
-      margin-bottom: 25px;
+      font-family: 'Cinzel', 'Bodoni Moda', serif;
+      font-size: 80px;
+      font-weight: 900;
+      line-height: 1;
+      letter-spacing: -1px;
+      margin-bottom: 20px;
       color: var(--text-primary);
+      text-transform: uppercase;
+    }
+
+    h1 em {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-weight: 600;
+      color: var(--palladian-green);
+      text-transform: none;
     }
 
     .subtitle {
-      font-family: 'Georgia', serif;
-      font-style: italic;
-      font-size: 20px;
-      color: var(--accent-olive);
-      margin-top: 10px;
+      font-family: 'Cinzel', serif;
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--intrecciato-tan);
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      margin-top: 15px;
     }
 
-    /* CONTENT SYSTEM */
+    /* BOTTEGA QUOTE BOX - STILE RINASCIMENTALE */
+    .bottega-quote {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-size: 28px;
+      color: var(--palladian-green);
+      text-align: center;
+      margin: 40px auto 100px;
+      max-width: 750px;
+      padding: 40px 20px;
+      border-top: 2px solid var(--intrecciato-tan);
+      border-bottom: 2px solid var(--intrecciato-tan);
+      position: relative;
+    }
+
+    .bottega-quote::after {
+      content: '✦';
+      position: absolute;
+      bottom: -13px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--bg-primary);
+      padding: 0 15px;
+      color: var(--intrecciato-tan);
+      font-size: 16px;
+    }
+
+    /* CONTENT WRAPPER & SECTIONS */
     .content-wrapper {
-      max-width: 1000px;
+      max-width: 1100px;
       margin: 0 auto;
       padding: 0 72px 140px;
     }
 
     .section {
-      padding: 100px 0;
-      border-bottom: 1px solid rgba(0,0,0,0.05);
+      padding: 90px 0;
+      border-bottom: 1px solid var(--border-soft);
     }
+    
     .section:last-child { border-bottom: none; }
 
     .s-label {
-      font-family: 'Georgia', serif;
-      font-size: 14px;
-      letter-spacing: 2px;
-      color: var(--accent-olive);
+      font-family: 'Cinzel', serif;
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 3px;
+      color: var(--intrecciato-tan);
       text-transform: uppercase;
-      margin-bottom: 20px;
+      margin-bottom: 15px;
       display: block;
     }
 
     h2 {
-      font-family: 'Bodoni Moda', serif;
-      font-size: 48px;
-      font-weight: 400;
-      margin-bottom: 40px;
+      font-family: 'Cinzel', 'Playfair Display', serif;
+      font-size: 42px;
+      font-weight: 800;
+      line-height: 1.15;
+      margin-bottom: 25px;
       color: var(--text-primary);
+    }
+
+    h2 em {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      color: var(--palladian-green);
+      font-weight: 600;
     }
 
     p {
-      font-size: 19px;
-      color: rgba(26, 26, 26, 0.9);
-      margin-bottom: 25px;
+      font-size: 18px;
+      color: #2A2A2A;
+      margin-bottom: 20px;
+      font-weight: 400;
     }
 
-    ul { list-style: none; margin-top: 20px; }
+    /* GRID & CIRCULAR IMAGES (TONDO RINASCIMENTALE) */
+    .grid-section {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .grid-section.reverse {
+      grid-template-columns: 0.8fr 1.2fr;
+    }
+
+    .circle-img-container {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .circle-img {
+      width: 320px;
+      height: 320px;
+      border-radius: 50%; /* Trasforma l'immagine in cerchio */
+      object-fit: cover;
+      border: 6px solid var(--white);
+      box-shadow: 0 16px 40px rgba(43, 58, 44, 0.15);
+      transition: transform 0.5s ease, box-shadow 0.5s ease;
+    }
+
+    .circle-img-container::before {
+      content: '';
+      position: absolute;
+      width: 340px;
+      height: 340px;
+      border-radius: 50%;
+      border: 1px dashed var(--intrecciato-tan);
+      z-index: -1;
+    }
+
+    .circle-img:hover {
+      transform: scale(1.03);
+      box-shadow: 0 20px 50px rgba(0, 230, 91, 0.2);
+    }
+
+    /* LIST STYLE CON ACCENTO BOTTEGA GREEN */
+    ul { list-style: none; margin-top: 25px; }
+    
     ul li {
-      padding: 18px 0;
-      font-size: 19px;
+      padding: 16px 0;
+      font-size: 17px;
       display: flex;
       align-items: flex-start;
-      border-bottom: 1px solid rgba(0,0,0,0.03);
+      border-bottom: 1px solid rgba(0,0,0,0.05);
     }
-    ul li:last-child { border-bottom: none; }
+
     ul li::before {
-      content: '—';
-      margin-right: 25px;
-      color: var(--accent-tan);
+      content: '◆';
+      font-size: 10px;
+      margin-right: 20px;
+      margin-top: 6px;
+      color: var(--bottega-green);
     }
 
-    /* ALIGNMENT FIX: Adds space between label: and the text */
     ul li strong {
-      min-width: 180px; /* Ensures all labels have the same width */
+      min-width: 170px;
+      font-family: 'Cinzel', serif;
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      color: var(--palladian-green);
       display: inline-block;
-      margin-right: 35px; /* Adjust this value for more/less space */
+      margin-right: 20px;
       flex-shrink: 0;
+      text-transform: uppercase;
     }
 
-    .bottega-quote {
-      font-family: 'Georgia', serif;
-      font-style: italic;
-      font-size: 24px;
-      color: var(--text-primary);
-      text-align: center;
-      margin: 60px auto;
-      max-width: 600px;
-      padding: 40px;
-      border-top: 1px solid var(--accent-tan);
-      border-bottom: 1px solid var(--accent-tan);
-    }
-
+    /* FOOTER */
     footer {
       text-align: center;
-      padding: 120px 72px;
-      background: #FFFFFF;
-      color: var(--text-primary);
-      font-family: 'Georgia', serif;
-      font-size: 14px;
-      letter-spacing: 1px;
+      padding: 100px 72px;
+      background: var(--palladian-green);
+      color: var(--white);
+      font-family: 'Cinzel', serif;
+      font-size: 13px;
+      letter-spacing: 2px;
     }
-    footer a { color: var(--accent-olive); text-decoration: none; }
+
+    footer a { 
+      color: var(--bottega-green); 
+      text-decoration: none; 
+      font-weight: 700;
+    }
+
+    footer a:hover { text-decoration: underline; }
+
+    /* RESPONSIVE DESIGN */
+    @media (max-width: 900px) {
+      .grid-section, .grid-section.reverse {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+      
+      .grid-section.reverse .circle-img-container {
+        grid-row: 2;
+      }
+
+      .circle-img {
+        width: 260px;
+        height: 260px;
+      }
+
+      .circle-img-container::before {
+        width: 278px;
+        height: 278px;
+      }
+    }
 
     @media (max-width: 768px) {
-      header, .content-wrapper { padding: 80px 24px; }
-      h1 { font-size: 48px; }
-      h2 { font-size: 36px; }
+      header, .content-wrapper { padding: 60px 24px; }
+      h1 { font-size: 52px; }
+      h2 { font-size: 32px; }
       ul li { flex-direction: column; }
       ul li strong { margin-bottom: 5px; }
     }
@@ -175,69 +308,103 @@
       “When your own initials are enough”
     </div>
 
+    <!-- SEZIONE 01 -->
     <section class="section">
-      <div class="s-label">01 / Brand Overview</div>
-      <div>
-        <h2>The Leather Atelier</h2>
-        <p>A brand built on quiet luxury, artisanal leather craftsmanship, and discreet, logo-free design. Rooted in the traditional Italian "Bottega," the brand treats heritage as a timeless investment.</p>
-        <ul>
-          <li><strong>Philosophy:</strong> Luxury is defined by the quality of the material and the mastery of the craft, not the noise of a logo.</li>
-          <li><strong>Target Audience:</strong> High-net-worth individuals and Gen-Z connoisseurs seeking authenticity and intrinsic value.</li>
-          <li><strong>Core Values:</strong> Artisanal excellence, logo-free identity, and a celebration of discreet individuality.</li>
-        </ul>
+      <div class="grid-section">
+        <div>
+          <span class="s-label">01 / Brand Overview</span>
+          <h2>The Leather Atelier</h2>
+          <p>A brand built on quiet luxury, artisanal leather craftsmanship, and discreet, logo-free design. Rooted in the traditional Italian "Bottega," the brand treats heritage as a timeless investment.</p>
+          <ul>
+            <li><strong>Philosophy:</strong> Luxury is defined by the quality of the material and the mastery of the craft, not the noise of a logo.</li>
+            <li><strong>Target Audience:</strong> High-net-worth individuals and Gen-Z connoisseurs seeking authenticity and intrinsic value.</li>
+            <li><strong>Core Values:</strong> Artisanal excellence, logo-free identity, and a celebration of discreet individuality.</li>
+          </ul>
+        </div>
+        <div class="circle-img-container">
+          <!-- Salva l'immagine nella tua cartella image/ con questo nome -->
+          <img class="circle-img" src="image/bottega_atelier.jpg" alt="Bottega Veneta Leather Craftsmanship">
+        </div>
       </div>
     </section>
 
+    <!-- SEZIONE 02 -->
     <section class="section">
-      <div class="s-label">02 / The Challenge</div>
-      <div>
-        <h2>Generational Renewal</h2>
-        <p>The primary growth challenge lies in renewing cultural relevance and attracting younger generations while strictly preserving the brand’s innate discretion.</p>
-        <p>The risk of "staying too silent" could allow culturally noisy competitors to limit long-term growth among younger segments who value history but require a point of entry.</p>
+      <div class="grid-section reverse">
+        <div class="circle-img-container">
+          <!-- Salva l'immagine nella tua cartella image/ con questo nome -->
+          <img class="circle-img" src="image/bottega_challenge.jpg" alt="Luxury Architecture and Heritage">
+        </div>
+        <div>
+          <span class="s-label">02 / The Challenge</span>
+          <h2>Generational Renewal</h2>
+          <p>The primary growth challenge lies in renewing cultural relevance and attracting younger generations while strictly preserving the brand’s innate discretion.</p>
+          <p>The risk of "staying too silent" could allow culturally noisy competitors to limit long-term growth among younger segments who value history but require a point of entry.</p>
+        </div>
       </div>
     </section>
 
+    <!-- SEZIONE 03 -->
     <section class="section">
-      <div class="s-label">03 / Cultural Strategy</div>
-      <div>
-        <h2>Association: <em>La Rotonda</em></h2>
-        <p>Founded in Vicenza, the cradle of Palladian Renaissance architecture, Bottega Veneta elevates itself to a cultural institution by anchoring its identity to Villa La Rotonda.</p>
-        <p>As Andrea Palladio’s absolute masterpiece, La Rotonda is an icon of harmony and proportion. Its structural integrity mirrors the brand’s artisanal DNA.</p>
-        <ul>
-          <li><strong>Timelessness:</strong> Palladian integrity elevates accessories to structural masterpieces, ensuring relevance beyond seasonal trends.</li>
-          <li><strong>Authenticity:</strong> Deepens brand perception through the connection to Veneto’s high-quality leather production history.</li>
-          <li><strong>Shared Heritage:</strong> Creates a powerful narrative linking local craftsmanship to world-renowned architectural excellence.</li>
-        </ul>
+      <div class="grid-section">
+        <div>
+          <span class="s-label">03 / Cultural Strategy</span>
+          <h2>Association: <em>La Rotonda</em></h2>
+          <p>Founded in Vicenza, the cradle of Palladian Renaissance architecture, Bottega Veneta elevates itself to a cultural institution by anchoring its identity to Villa La Rotonda.</p>
+          <p>As Andrea Palladio’s absolute masterpiece, La Rotonda is an icon of harmony and proportion. Its structural integrity mirrors the brand’s artisanal DNA.</p>
+          <ul>
+            <li><strong>Timelessness:</strong> Palladian integrity elevates accessories to structural masterpieces, ensuring relevance beyond seasonal trends.</li>
+            <li><strong>Authenticity:</strong> Deepens brand perception through the connection to Veneto’s high-quality leather production history.</li>
+            <li><strong>Shared Heritage:</strong> Creates a powerful narrative linking local craftsmanship to world-renowned architectural excellence.</li>
+          </ul>
+        </div>
+        <div class="circle-img-container">
+          <!-- Salva l'immagine nella tua cartella image/ con questo nome -->
+          <img class="circle-img" src="image/palladio_rotonda.jpg" alt="Villa La Rotonda Palladio Architecture">
+        </div>
       </div>
     </section>
 
+    <!-- SEZIONE 04 -->
     <section class="section">
-      <div class="s-label">04 / Activation Ideas</div>
-      <div>
-        <h2>From History to Engagement</h2>
-        <p>Moving beyond "hype" to focus on material intelligence and active participation with cultural legacy.</p>
-        <ul>
-          <li><strong>Fashion Show:</strong> An exclusive event inside Villa La Rotonda inspired by Renaissance geometric proportions.</li>
-          <li><strong>Permanent Museum:</strong> An exhibition within the Villa to explore the brand's history, featuring free entry for youth under 26.</li>
-          <li><strong>Interactive Storytelling:</strong> Utilizing guest-generated content and social media to increase community engagement.</li>
-        </ul>
+      <div class="grid-section reverse">
+        <div class="circle-img-container">
+          <!-- Salva l'immagine nella tua cartella image/ con questo nome -->
+          <img class="circle-img" src="image/bottega_activation.jpg" alt="Bottega Veneta Exhibition Event">
+        </div>
+        <div>
+          <span class="s-label">04 / Activation Ideas</span>
+          <h2>From History to Engagement</h2>
+          <p>Moving beyond "hype" to focus on material intelligence and active participation with cultural legacy.</p>
+          <ul>
+            <li><strong>Fashion Show:</strong> An exclusive event inside Villa La Rotonda inspired by Renaissance geometric proportions.</li>
+            <li><strong>Permanent Museum:</strong> An exhibition within the Villa to explore the brand's history, featuring free entry for youth under 26.</li>
+            <li><strong>Interactive Storytelling:</strong> Utilizing guest-generated content and social media to increase community engagement.</li>
+          </ul>
+        </div>
       </div>
     </section>
 
+    <!-- SEZIONE 05 -->
     <section class="section">
-      <div class="s-label">05 / Impact</div>
-      <div>
-        <h2>The Outcome</h2>
-        <p>Reinforcing unattainable allure and justifying higher prices through exclusivity and physical places.</p>
-        <ul>
-          <li><strong>Perception:</strong> Deepened youth connection to brand roots and perceived authenticity.</li>
-          <li><strong>Sustainability:</strong> Increased brand value via sustainability and the recycling of old leather.</li>
-        </ul>
+      <div class="grid-section">
+        <div>
+          <span class="s-label">05 / Impact</span>
+          <h2>The Outcome</h2>
+          <p>Reinforcing unattainable allure and justifying higher prices through exclusivity and physical places.</p>
+          <ul>
+            <li><strong>Perception:</strong> Deepened youth connection to brand roots and perceived authenticity.</li>
+            <li><strong>Sustainability:</strong> Increased brand value via sustainability and the recycling of old leather.</li>
+          </ul>
+        </div>
+        <div class="circle-img-container">
+          <!-- Salva l'immagine nella tua cartella image/ con questo nome -->
+          <img class="circle-img" src="image/bottega_impact.jpg" alt="Artisanal Leather Detail">
+        </div>
       </div>
     </section>
 
   </div>
-
   <footer>
     <p>Part of <a href="index.html">Federica Grassi's Portfolio </a> | 2026</p>
   </footer>
