@@ -87,7 +87,7 @@
       text-transform: uppercase;
     }
 
-    /* HERO BANNER A TUTTO SCHERMO (A BANDA ORIZZONTALE) */
+    /* HERO BANNER A TUTTO SCHERMO */
     .hero-banner-wrapper {
       width: 30vw;
       position: relative;
@@ -109,7 +109,7 @@
       border-bottom: 1px solid var(--border-light);
     }
 
-    /* HIGHLIGHT METRICS / SUMMARY BOX RINASCIMENTALE */
+    /* HIGHLIGHT METRICS */
     .highlight-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -128,7 +128,7 @@
     }
 
     .highlight-label {
-      font-family: 'Georgia', serif;
+      font-family: 'Cinzel', serif;
       font-size: 11px;
       font-weight: 600;
       color: var(--intrecciato-tan);
@@ -138,14 +138,14 @@
     }
 
     .highlight-value {
-      font-family: 'Playfair Display', serif;
+      font-family: 'Georgia', serif;
       font-size: 20px;
       font-weight: 600;
       color: var(--text-primary);
       font-style: italic;
     }
 
-    /* CITAZIONE RINASCIMENTALE */
+    /* CITAZIONE */
     .bottega-quote {
       font-family: 'Playfair Display', serif;
       font-style: italic;
@@ -214,12 +214,12 @@
       font-weight: 400;
     }
 
-    /* GRID & CENTRATURA VERTICALE PERFETTA DELLE IMMAGINI */
+    /* GRID & CENTRATURA VERTICALE */
     .grid-section {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: clamp(40px, 6vw, 70px);
-      align-items: center; /* CENTRATURA VERTICALE PERFETTA */
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: clamp(30px, 5vw, 60px);
+      align-items: center;
     }
 
     .circle-img-container {
@@ -230,7 +230,6 @@
       margin: 10px 0;
     }
 
-    /* IMMAGINI CIRCOLARI (MEDAGLIONI) */
     .circle-img {
       width: clamp(250px, 28vw, 360px);
       height: clamp(250px, 28vw, 360px);
@@ -320,7 +319,18 @@
       text-decoration: underline;
     }
 
-    @media (max-width: 768px) {
+    /* ORDINAMENTO DEDICATO A SMARTPHONE: TESTO SEMPRE PRIMA, IMMAGINE SEMPRE DOPO */
+    @media (max-width: 800px) {
+      .grid-section {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+      .text-col {
+        order: 1 !important; /* Forza il testo ad andare prima */
+      }
+      .circle-img-container {
+        order: 2 !important; /* Forza l'immagine ad andare subito dopo */
+      }
       ul li { flex-direction: column; }
       ul li strong { margin-bottom: 6px; width: auto; min-width: 0; }
     }
@@ -337,14 +347,12 @@
     </div>
   </header>
 
-  <!-- BANNER HERO A TUTTO SCHERMO (BANDA ORIZZONTALE) -->
   <div class="hero-banner-wrapper">
     <img class="hero-banner" src="image/bottega_impact.png" alt="Bottega Veneta Heritage Architecture">
   </div>
 
   <div class="content-wrapper">
     
-    <!-- METRICHE DI SINTESI DEL CASE STUDY -->
     <div class="highlight-grid">
       <div class="highlight-card">
         <div class="highlight-label">Brand Positioning</div>
@@ -367,7 +375,7 @@
     <!-- SEZIONE 01 -->
     <section class="section">
       <div class="grid-section">
-        <div>
+        <div class="text-col">
           <span class="s-label">01 / Brand Overview</span>
           <h2>The Leather Atelier</h2>
           <p>A brand built on quiet luxury, artisanal leather craftsmanship, and discreet, logo-free design. Rooted in the traditional Italian "Bottega," the brand treats heritage as a timeless investment.</p>
@@ -386,14 +394,14 @@
     <!-- SEZIONE 02 -->
     <section class="section">
       <div class="grid-section">
-        <div class="circle-img-container">
-          <img class="circle-img" src="image/bottega_challenge.png" alt="Luxury Architecture and Heritage">
-        </div>
-        <div>
+        <div class="text-col">
           <span class="s-label">02 / The Challenge</span>
           <h2>Generational Renewal</h2>
           <p>The primary growth challenge lies in renewing cultural relevance and attracting younger generations while strictly preserving the brand’s innate discretion.</p>
           <p>The risk of "staying too silent" could allow culturally noisy competitors to limit long-term growth among younger segments who value history but require a point of entry.</p>
+        </div>
+        <div class="circle-img-container">
+          <img class="circle-img" src="image/bottega_challenge.png" alt="Luxury Architecture and Heritage">
         </div>
       </div>
     </section>
@@ -401,7 +409,7 @@
     <!-- SEZIONE 03 -->
     <section class="section">
       <div class="grid-section">
-        <div>
+        <div class="text-col">
           <span class="s-label">03 / Cultural Strategy</span>
           <h2>Association: Villa La Rotonda</h2>
           <p>Founded in Vicenza, the cradle of Palladian Renaissance architecture, Bottega Veneta elevates itself to a cultural institution by anchoring its identity to Villa La Rotonda.</p>
@@ -421,10 +429,7 @@
     <!-- SEZIONE 04 -->
     <section class="section">
       <div class="grid-section">
-        <div class="circle-img-container">
-          <img class="circle-img" src="image/bottega_activation.png" alt="Bottega Veneta Exhibition Event">
-        </div>
-        <div>
+        <div class="text-col">
           <span class="s-label">04 / Activation Ideas</span>
           <h2>From History to Engagement</h2>
           <p>Moving beyond "hype" to focus on material intelligence and active participation with cultural legacy.</p>
@@ -434,13 +439,16 @@
             <li><strong>Interactive Storytelling:</strong> Utilizing guest-generated content and social media to increase community engagement.</li>
           </ul>
         </div>
+        <div class="circle-img-container">
+          <img class="circle-img" src="image/bottega_activation.png" alt="Bottega Veneta Exhibition Event">
+        </div>
       </div>
     </section>
 
     <!-- SEZIONE 05 -->
     <section class="section">
       <div class="grid-section">
-        <div>
+        <div class="text-col">
           <span class="s-label">05 / Impact</span>
           <h2>The Outcome</h2>
           <p>Reinforcing unattainable allure and justifying higher prices through exclusivity and physical places.</p>
