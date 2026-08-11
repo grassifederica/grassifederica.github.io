@@ -6,15 +6,16 @@
   <title>Bottega Veneta Case Study — Federica Grassi</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Cinzel:wght@600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,800;1,600;1,800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Cinzel:wght@500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg-primary: #F5F3ED; /* Pietra di Vicenza / Crema di lusso */
-      --text-primary: #0A0A0A; /* Nero satinato profondo */
-      --bottega-green: #00E65B; /* Verde Parakeet Iconico Bottega Veneta */
-      --palladian-green: #1B291C; /* Verde scuro marmo palladiano */
-      --intrecciato-tan: #96724B; /* Toni cuoio Intrecciato */
-      --border-soft: rgba(27, 41, 28, 0.15);
+      --bg-primary: #F7F6F2; /* Sfondo pietra palladiana e crema lusso */
+      --text-primary: #111111; /* Nero satinato pulito */
+      --bottega-green: #00E552; /* L'ESATTO VERDE PARAKEET BOTTEGA VENETA */
+      --bottega-green-dark: #00C844;
+      --palladian-slate: #1C1E21; /* Grigio/Nero architettonico */
+      --intrecciato-tan: #8C6D46; /* Dettagli cuoio */
+      --border-light: rgba(0, 0, 0, 0.08);
       --white: #FFFFFF;
     }
 
@@ -29,9 +30,9 @@
       -webkit-font-smoothing: antialiased;
     }
 
-    /* HEADER BOTTEGA STYLE */
+    /* HEADER */
     header {
-      padding: 140px 72px 60px;
+      padding: 130px 72px 70px;
       max-width: 1200px;
       margin: 0 auto;
       text-align: center;
@@ -41,80 +42,67 @@
       font-family: 'Cinzel', serif;
       text-decoration: none;
       color: var(--text-primary);
-      font-size: 12px;
-      font-weight: 800;
+      font-size: 11px;
+      font-weight: 700;
       letter-spacing: 4px;
       text-transform: uppercase;
       display: inline-block;
-      margin-bottom: 50px;
-      transition: all 0.3s ease;
-      position: relative;
-    }
-    
-    .back-link:hover { 
-      color: var(--bottega-green);
-      transform: translateX(-4px);
+      margin-bottom: 60px;
+      transition: color 0.3s ease;
     }
 
+    .back-link:hover {
+      color: var(--bottega-green-dark);
+    }
+
+    /* TITOLO PULITO: INTERAMENTE IN MAIUSCOLO E STESSO STILE */
     h1 {
       font-family: 'Cinzel', serif;
-      font-size: 88px;
-      font-weight: 900;
-      line-height: 0.95;
-      letter-spacing: -2px;
-      margin-bottom: 25px;
+      font-size: 76px;
+      font-weight: 800;
+      line-height: 1;
+      letter-spacing: 6px;
       color: var(--text-primary);
       text-transform: uppercase;
-    }
-
-    h1 em {
-      font-family: 'Playfair Display', serif;
-      font-style: italic;
-      font-weight: 600;
-      color: var(--bottega-green);
-      text-transform: none;
-      padding: 0 10px;
+      margin-bottom: 20px;
     }
 
     .subtitle {
       font-family: 'Cinzel', serif;
-      font-size: 15px;
-      font-weight: 800;
+      font-size: 14px;
+      font-weight: 600;
       color: var(--intrecciato-tan);
-      letter-spacing: 4px;
+      letter-spacing: 3px;
       text-transform: uppercase;
-      margin-top: 20px;
     }
 
-    /* BOTTEGA QUOTE BOX - CITAZIONE STILE ARCHITETTURA PALLADIANA */
+    /* CITAZIONE STILE ARCHITETTURA PULITA */
     .bottega-quote {
-      font-family: 'Playfair Display', serif;
-      font-style: italic;
-      font-size: 32px;
-      font-weight: 600;
-      color: var(--palladian-green);
+      font-family: 'Bodoni Moda', serif;
+      font-size: 28px;
+      font-weight: 400;
+      color: var(--text-primary);
       text-align: center;
-      margin: 40px auto 100px;
-      max-width: 800px;
+      margin: 60px auto 100px;
+      max-width: 750px;
       padding: 40px 20px;
-      border-top: 2px solid var(--intrecciato-tan);
-      border-bottom: 2px solid var(--intrecciato-tan);
+      border-top: 1px solid var(--text-primary);
+      border-bottom: 1px solid var(--text-primary);
       position: relative;
     }
 
     .bottega-quote::after {
-      content: '❖';
+      content: '';
       position: absolute;
-      bottom: -14px;
+      bottom: -3px;
       left: 50%;
       transform: translateX(-50%);
-      background: var(--bg-primary);
-      padding: 0 20px;
-      color: var(--bottega-green);
-      font-size: 16px;
+      width: 60px;
+      height: 5px;
+      background: var(--bottega-green);
     }
 
-    /* CONTENT WRAPPER & SECTIONS */
+    /* CONTENT SYSTEM */
     .content-wrapper {
       max-width: 1100px;
       margin: 0 auto;
@@ -122,17 +110,17 @@
     }
 
     .section {
-      padding: 100px 0;
-      border-bottom: 1px solid var(--border-soft);
+      padding: 90px 0;
+      border-bottom: 1px solid var(--border-light);
     }
-    
+
     .section:last-child { border-bottom: none; }
 
     .s-label {
       font-family: 'Cinzel', serif;
-      font-size: 13px;
-      font-weight: 900;
-      letter-spacing: 4px;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 3px;
       color: var(--intrecciato-tan);
       text-transform: uppercase;
       margin-bottom: 15px;
@@ -140,30 +128,23 @@
     }
 
     h2 {
-      font-family: 'Cinzel', serif;
-      font-size: 46px;
-      font-weight: 800;
-      line-height: 1.1;
-      margin-bottom: 30px;
+      font-family: 'Bodoni Moda', serif;
+      font-size: 42px;
+      font-weight: 500;
+      line-height: 1.15;
+      margin-bottom: 25px;
       color: var(--text-primary);
-    }
-
-    h2 em {
-      font-family: 'Playfair Display', serif;
-      font-style: italic;
-      color: var(--bottega-green);
-      font-weight: 600;
+      letter-spacing: -0.5px;
     }
 
     p {
       font-size: 18px;
-      color: #222222;
+      color: #2D2D2D;
       margin-bottom: 20px;
       font-weight: 400;
-      line-height: 1.8;
     }
 
-    /* GRID & CIRCULAR IMAGES (TONDO RINASCIMENTALE .PNG) */
+    /* GRID E CERCHI RINASCIMENTALI MINIMALI */
     .grid-section {
       display: grid;
       grid-template-columns: 1.2fr 0.8fr;
@@ -183,118 +164,105 @@
     }
 
     .circle-img {
-      width: 320px;
-      height: 320px;
-      border-radius: 50%; /* Trasforma le foto in cerchi perfetti */
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
       object-fit: cover;
-      border: 6px solid var(--white);
-      box-shadow: 0 20px 45px rgba(0, 0, 0, 0.12);
-      transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
-      background-color: var(--white);
+      background: var(--white);
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+      border: 1px solid var(--border-light);
+      transition: all 0.4s ease;
     }
 
-    /* CORNICE RINASCIMENTALE / BOTTEGA ACCENT */
     .circle-img-container::before {
       content: '';
       position: absolute;
-      width: 344px;
-      height: 344px;
+      width: 320px;
+      height: 320px;
       border-radius: 50%;
-      border: 1px dashed var(--intrecciato-tan);
-      z-index: -1;
-      transition: all 0.5s ease;
+      border: 1px solid var(--bottega-green);
+      opacity: 0.6;
+      transition: all 0.4s ease;
     }
 
-    .circle-img-container::after {
-      content: '';
-      position: absolute;
-      width: 360px;
-      height: 360px;
-      border-radius: 50%;
-      border: 1px solid rgba(0, 230, 91, 0.3);
-      z-index: -2;
-    }
-
-    .circle-img:hover {
-      transform: scale(1.04);
-      box-shadow: 0 25px 55px rgba(0, 230, 91, 0.25);
+    .circle-img-container:hover .circle-img {
+      transform: scale(1.02);
+      box-shadow: 0 20px 40px rgba(0, 229, 82, 0.2);
     }
 
     .circle-img-container:hover::before {
-      border-color: var(--bottega-green);
-      transform: rotate(15deg);
+      opacity: 1;
+      transform: scale(1.05);
     }
 
-    /* LIST STYLE CON SIMBOLO BOTTEGA */
-    ul { list-style: none; margin-top: 30px; }
-    
+    /* ELENCHI CON PUNTO ACCENTO VERDE BOTTEGA */
+    ul { list-style: none; margin-top: 25px; }
+
     ul li {
-      padding: 18px 0;
+      padding: 16px 0;
       font-size: 17px;
       display: flex;
       align-items: flex-start;
-      border-bottom: 1px solid rgba(0,0,0,0.06);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.04);
     }
 
     ul li::before {
-      content: '❖';
-      font-size: 12px;
-      margin-right: 20px;
-      margin-top: 4px;
+      content: '•';
       color: var(--bottega-green);
+      font-size: 24px;
+      line-height: 1;
+      margin-right: 18px;
     }
 
     ul li strong {
-      min-width: 180px;
+      min-width: 170px;
       font-family: 'Cinzel', serif;
-      font-size: 14px;
-      font-weight: 800;
+      font-size: 13px;
+      font-weight: 700;
       letter-spacing: 1.5px;
-      color: var(--palladian-green);
+      color: var(--text-primary);
       display: inline-block;
       margin-right: 20px;
       flex-shrink: 0;
       text-transform: uppercase;
     }
 
-    /* FOOTER BOTTEGA */
+    /* FOOTER */
     footer {
       text-align: center;
-      padding: 100px 72px;
+      padding: 90px 72px;
       background: var(--text-primary);
       color: var(--white);
       font-family: 'Cinzel', serif;
-      font-size: 13px;
+      font-size: 12px;
       letter-spacing: 3px;
     }
 
-    footer a { 
-      color: var(--bottega-green); 
-      text-decoration: none; 
-      font-weight: 800;
+    footer a {
+      color: var(--bottega-green);
+      text-decoration: none;
+      font-weight: 700;
     }
 
-    footer a:hover { text-decoration: underline; }
+    footer a:hover {
+      text-decoration: underline;
+    }
 
-    /* RESPONSIVE DESIGN */
     @media (max-width: 900px) {
       .grid-section, .grid-section.reverse {
         grid-template-columns: 1fr;
         gap: 40px;
       }
-      
       .grid-section.reverse .circle-img-container {
         grid-row: 2;
       }
-
-      .circle-img { width: 260px; height: 260px; }
-      .circle-img-container::before { width: 280px; height: 280px; }
-      .circle-img-container::after { width: 296px; height: 296px; }
+      .circle-img { width: 250px; height: 250px; }
+      .circle-img-container::before { width: 268px; height: 268px; }
     }
 
     @media (max-width: 768px) {
       header, .content-wrapper { padding: 60px 24px; }
-      h1 { font-size: 52px; }
+      h1 { font-size: 46px; letter-spacing: 3px; }
       h2 { font-size: 32px; }
       ul li { flex-direction: column; }
       ul li strong { margin-bottom: 6px; }
@@ -307,7 +275,7 @@
     <a href="index.html#projects" class="back-link" aria-label="Back to portfolio home">← Back to Portfolio</a>
     <div>
       <p class="s-label">Case Study Project</p>
-      <h1>Bottega <em>Veneta</em></h1>
+      <h1>BOTTEGA VENETA</h1>
       <p class="subtitle">Luxury Brand Growth Through Secondary Associations</p>
     </div>
   </header>
@@ -357,7 +325,7 @@
       <div class="grid-section">
         <div>
           <span class="s-label">03 / Cultural Strategy</span>
-          <h2>Association: <em>La Rotonda</em></h2>
+          <h2>Association: Villa La Rotonda</h2>
           <p>Founded in Vicenza, the cradle of Palladian Renaissance architecture, Bottega Veneta elevates itself to a cultural institution by anchoring its identity to Villa La Rotonda.</p>
           <p>As Andrea Palladio’s absolute masterpiece, La Rotonda is an icon of harmony and proportion. Its structural integrity mirrors the brand’s artisanal DNA.</p>
           <ul>
