@@ -102,6 +102,19 @@
       font-style: italic;
       text-align: right;
     }
+        /* Stile per diagrammi e infografiche orizzontali */
+    .full-width-img {
+      width: 100%;
+      height: auto; /* Mantiene le proporzioni originali senza tagliare il contenuto */
+      max-height: 550px;
+      object-fit: contain; /* Garantisce che tutto il testo e i cerchi siano visibili */
+      border-radius: 16px;
+      background-color: var(--white);
+      padding: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+      margin-top: 30px;
+      display: block;
+    }
 
     /* SECTION LAYOUT */
     .container {
@@ -369,9 +382,14 @@
       <p>Retail transcends price wars to compete on trust. Products are no longer just goods, but carriers of culture.</p>
       
       <div class="grid-2col">
-        <!-- IMMAGINE 4 DALLA CARTELLA image/ -->
-        <img class="grid-img" src="image/infinite customer journey.png" alt="Customer journey">
-        <ul>
+     <section class="section">
+      <div class="s-label">04 / INFINITE JOURNEY</div>
+      <h2>Seamless <em>Integration</em></h2>
+      <p>The experience begins pre-store with web browsing and pre-orders, moving into an exploratory in-store phase guided by AI and human interaction.</p>
+      
+      <!-- Immagine diagramma customer journey -->
+      <img class="full-width-img" src="image/infinite customer journey.png" alt="Infinite Customer Journey Diagram - Out of the Store and In the Store">
+    </section>
           <li><strong>For the Customer:</strong> A sense of clarity, personalization, and confidence in their moral and ethical choices.</li>
           <li><strong>For the Employee:</strong> Empowerment as an "Expert" with purpose, providing the cultural depth that completes the digital journey.</li>
         </ul>
